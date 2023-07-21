@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+:root {
+  --background: #000000;
+  --card: #0A0A0A;
+  --titulo: #e4e4e4;
+  --texto: #C8F8DB;
+  --efeitos: #672abf;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  scroll-behavior: smooth;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+p {
+  color: #fff;
+}
+
+section {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.face {
+  width: 400px;
+  height: 600px;
+}
+
+
+.card-back {
+  width: 25rem;
+  height: 600px;
+  background: var(--card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  position: absolute;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 10px 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card-back {
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+
+.face.active .card{
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+
+.face.active .card-back {
+  transform: rotateX(0);
+  z-index: 1;
+}
+
+.card {
+  width: 25rem;
+  height: 500px;
+  background: var(--card);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  position: absolute;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 10px 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.card span:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, rgb(134, 91, 184));
+  animation: animar1 2s linear infinite;
+}
+
+@keyframes animar1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.card span:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgb(134, 91, 184));
+  animation: animar2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animar2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.card span:nth-of-type(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, rgb(134, 91, 184));
+  animation: animar3 2s linear infinite;
+}
+
+@keyframes animar3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card span:nth-of-type(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgb(134, 91, 184));
+  animation: animar4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animar4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 20px solid transparent;
+  border-top: 20px solid var(--efeitos);
+  border-right: 20px solid var(--efeitos);
+}
+
+
+
+.content  h3 {
+  text-align: center;
+  color: var(--titulo);
+  margin-bottom: 24px;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.h3 {
+  text-align: center;
+  margin-bottom: -8px;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  color: var(--titulo);
+}
+
+
+h2::before {
+  content: '';
+  position: absolute;
+  background-color: var(--efeitos);
+  height: 2px;
+  width: 40px;
+  bottom: 2.4px; 
+  transition: all .6s ease;
+}
+
+h2:hover::before {
+  cursor: pointer;
+  width: 176.5px;
+  transition: all .6s ease;
+}
+
+
+.skills{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 60px 0;
+}
+
+
+
+.skills a {
+  background-color: var(--background);
+  color: var(--texto);
+  align-items: center;
+  border-radius: 0.2rem;
+  padding: 0.4em;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.content, .content-back {
+  height: 180px;
+}
+
+
+.face h3::before {
+  content: '';
+  position: absolute;
+  background-color: var(--efeitos);
+  height: 2px;
+  width: 40px;
+  bottom: 3px; 
+  transition: all .6s ease;
+}
+
+.face h3:hover::before {
+  cursor: pointer;
+  width: 138px;
+  transition: all .6s ease;
+}
+
+.face  h3::before {
+  content: '';
+  position: absolute;
+  background-color: var(--efeitos);
+  height: 2px;
+  width: 40px;
+  bottom: 4px; 
+  transition: all .6s ease;
+}
+
+.face h3:hover::before {
+  cursor: pointer;
+  width: 138px;
+  transition: all .6s ease;
+}
+
+.content-back h3 {
+  text-align: center;
+  top: -100px;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 80px;
+  color: var(--titulo);
+}
+
+.content-back button {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 32px;
+  padding: 20px;
+}
+
+.image img {
+  margin: -44px auto 20px;
+  width: 180px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgb(149, 114, 252);
+  animation: borderAnimated 5s linear infinite;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+@keyframes borderAnimated {
+  0% {
+    border: 1.7px solid #672abf;
+  }
+  25% {
+    border: 1.7px solid rgb(236, 102, 12);
+  }
+  50% {
+    border: 1.7px solid #672abf;
+  }
+  75% {
+    border: 1.7px solid rgb(236, 102, 12);
+  }
+  100% {
+    border: 1.7px solid #672abf;
+  }
+}
+
+#read-btn, #read-btn2 {
+  width: 12rem;
+  height: 3rem;
+  background-color: var(--efeitos);
+  border: none;
+  font-weight: bold;
+  color: var(--titulo);
+  font-size: 16px;
+  padding: 4px;
+  margin-top: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.div-btn {
+  margin: 40px 0 -60px 0;
+  padding: 20px;
+}
+
+
+#read-btn:hover, #read-btn2:hover {
+  background: transparent;
+  color: #8151c4;
+  transition: all .4s;
+  border: 2px solid;
+}
+
+.content-back .social-medias {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: -90px;
+}
+
+.content-back .social-media {
+  text-decoration: none;
+  transition: transform 0.2s ease-in;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  font-size: 24px
+}
+
+.content-back .social-media:hover {
+  transform: translateY(10px);
+  color: var(--efeitos);
+  transition: 0.5s ease;
+}
