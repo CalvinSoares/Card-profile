@@ -29,11 +29,6 @@ p {
   color: #fff;
 }
 
-section {
-  width: 500px;
-  margin: 50px auto;
-}
-
 .face {
   width: 400px;
   height: 600px;
@@ -373,4 +368,19 @@ h2:hover::before {
   transform: translateY(10px);
   color: var(--efeitos);
   transition: 0.5s ease;
+}
+
+@media only screen and (max-width: 420px) {
+  .card, .card-back {
+    width: 20rem;
+    height: 600px;
+    
+    margin: auto auto auto 44px;
+  }
+  .content h3 {
+    margin: 4px 0 40px 0;
+  }
+  #read-btn {
+    margin-top: 42px;
+  }
 }
