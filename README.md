@@ -33,6 +33,8 @@ git clone https://github.com/CalvinSoares/Card-profile.git
 cd Card-profile
 
 ```
+Depois disso, utilize uma ferramenta como o [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para criar um servidor local e executar o projeto.
+
 ## Autor
 
 * Calvin Soares
