@@ -13,7 +13,6 @@ Card feito para um desafio pessoal, informações basicas sobre mim.
 ## Demonstração 
 
 ![image](https://github.com/CalvinSoares/Card-profile/assets/99036067/8b1616cc-2739-46b8-b8f4-c78cfa69caa8)
-
 ![image](https://github.com/CalvinSoares/Card-profile/assets/99036067/5434c1d2-9755-4568-82d8-ef3b4acf7596)
 
 ## Tecnologias utilizadas: 
