@@ -19,9 +19,8 @@ Card feito para um desafio pessoal, informações basicas sobre mim.
 
 * **HTML5**
 * **CSS3**
-* **SASS**
 * **JAVASCRIPT**
-* **FIGMA**
+
 ## 🔧 Como Executar o projeto
 
 ```
